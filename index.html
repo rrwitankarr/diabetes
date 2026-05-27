@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Machine Learning Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Papa Parse for CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MAIN HEADING -->
+        <h1 class="main-heading">Machine Learning Algorithms</h1>
+
+        <!-- MAIN CONNECTOR -->
+        <div class="vertical-line"></div>
+
+        <!-- DATASET SECTION -->
+        <div class="dataset-section">
+
+            <div class="dataset-card">
+                <h2>Diabetes Dataset</h2>
+
+                <button onclick="toggleDataset()">
+                    View Dataset
+                </button>
+
+                <div id="datasetContainer" class="hidden dataset-container">
+                    <table id="datasetTable"></table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONNECTOR -->
+        <div class="algorithm-connector"></div>
+
+        <!-- ALGORITHM SECTION -->
+        <div class="algorithm-row">
+
+            <!-- LINEAR REGRESSION -->
+            <div class="algo-card">
+
+                <h2>Linear Regression</h2>
+
+                <p class="accuracy">Accuracy: 94%</p>
+
+                <div class="btn-group">
+                    <button onclick="toggleSection('linearCode')">
+                        Code
+                    </button>
+
+                    <button onclick="toggleSection('linearMatrix')">
+                        Confusion Matrix
+                    </button>
+                </div>
+
+                <div id="linearCode" class="result-box hidden">
+<pre>
+# Linear Regression Code Here
+</pre>
+                </div>
+
+                <div id="linearMatrix" class="result-box hidden">
+                    <img src="images/linear_matrix.png">
+                </div>
+
+            </div>
+
+            <!-- RANDOM FOREST -->
+            <div class="algo-card">
+
+                <h2>Random Forest</h2>
+
+                <p class="accuracy">Accuracy: 96%</p>
+
+                <div class="btn-group">
+
+                    <button onclick="toggleSection('rfCode')">
+                        Code
+                    </button>
+
+                    <button onclick="toggleSection('rfMatrix')">
+                        Confusion Matrix
+                    </button>
+
+                </div>
+
+                <div id="rfCode" class="result-box hidden">
+<pre>
+# Random Forest Code Here
+</pre>
+                </div>
+
+                <div id="rfMatrix" class="result-box hidden">
+                    <img src="images/rf_matrix.png">
+                </div>
+
+            </div>
+
+            <!-- XGBOOST -->
+            <div class="algo-card">
+
+                <h2>XGBoost</h2>
+
+                <p class="accuracy">Accuracy: 97%</p>
+
+                <div class="btn-group">
+
+                    <button onclick="toggleSection('xgbCode')">
+                        Code
+                    </button>
+
+                    <button onclick="toggleSection('xgbMatrix')">
+                        Confusion Matrix
+                    </button>
+
+                </div>
+
+                <div id="xgbCode" class="result-box hidden">
+<pre>
+# XGBoost Code Here
+</pre>
+                </div>
+
+                <div id="xgbMatrix" class="result-box hidden">
+                    <img src="images/xgb_matrix.png">
+                </div>
+
+            </div>
+
+            <!-- DECISION TREE -->
+            <div class="algo-card">
+
+                <h2>Decision Tree</h2>
+
+                <p class="accuracy">Accuracy: 93%</p>
+
+                <div class="btn-group">
+
+                    <button onclick="toggleSection('dtCode')">
+                        Code
+                    </button>
+
+                    <button onclick="toggleSection('dtMatrix')">
+                        Confusion Matrix
+                    </button>
+
+                    <button onclick="toggleSection('treeView')">
+                        View Tree
+                    </button>
+
+                </div>
+
+                <div id="dtCode" class="result-box hidden">
+<pre>
+# Decision Tree Code Here
+</pre>
+                </div>
+
+                <div id="dtMatrix" class="result-box hidden">
+                    <img src="images/dt_matrix.png">
+                </div>
+
+                <div id="treeView" class="result-box hidden">
+                    <img src="images/tree.png">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- COMPARE SECTION -->
+        <div class="compare-section">
+
+            <h2>Compare</h2>
+
+            <button onclick="toggleSection('compareGraph')">
+                View Graph
+            </button>
+
+            <div id="compareGraph" class="result-box hidden compare-box">
+                <img src="images/comparison_graph.png">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
