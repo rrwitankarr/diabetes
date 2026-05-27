@@ -71,11 +71,9 @@ A futuristic Machine Learning dashboard built using HTML, CSS, JavaScript, and P
 
 DIABETES/
 │
-├── index_claude.html
+├── index.html
 ├── diabetes.csv
 ├── diabetes.ipynb
-├── style.css
-├── script.js
 ├── .gitignore
 └── README.md
 
